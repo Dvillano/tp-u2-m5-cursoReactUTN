@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import PrimerComponente from './Components/PrimerComponente'
 import './App.css';
 
+const vectorNombres = [
+  "Juan Carlos",
+  "Maria",
+  "Gerardo"
+];
+
 function App() {
+
+  let respuesta = vectorNombres.map( el => 
+    <PrimerComponente name={el} />
+  );
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        {respuesta}
     </div>
   );
 }
